@@ -10,7 +10,7 @@
 例如:
 输入: words = ["gin", "zen", "gig", "msg"]
 输出: 2
-解释: 
+解释:
 各单词翻译如下:
 "gin" -> "--...-."
 "zen" -> "--...-."
@@ -34,17 +34,17 @@ public:
             ret += v[str[i] - 'a'];
         }
         return ret;
-        
+
     }
     int uniqueMorseRepresentations(vector<string>& words) {
         map<string, int> m;
-        
+
         for(int i = 0; i < words.size(); i++)
         {
-            string tmp =convertString(words[i]);
+            string tmp = convertString(words[i]);
             m[tmp] = 0;
         }
-        
+
         return m.size();
     }
 };
